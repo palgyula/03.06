@@ -12,7 +12,7 @@ img {
 header {
     text-align: center;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 100px; 
 }
 
 header h1:first-of-type {
@@ -42,6 +42,12 @@ header p:first-of-type{
 
 @media screen and (min-width: 800px) {
     .wrapper{
+        grid-template-areas: 
+        "..... team ....."
+        "super team calc"
+        "super karma calc"
+        "...... karma ....."
+        ;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 0 150px 0;
     }
@@ -51,37 +57,18 @@ header p:first-of-type{
     }
 
     .card:nth-of-type(1) {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 4;
+        grid-area: super;
     }
     
     .card:nth-of-type(2) {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        grid-area: team;
     }
     
     .card:nth-of-type(3) {
-        grid-column: 2 / 3;
-        /*grid-column-start: 2;
-        grid-column-end: 3;*/
-        grid-row: 3 / 5;
-        /*grid-row-start: 3;
-        grid-row-end: 5;*/
+        grid-area: karma;
     }
     
     .card:nth-of-type(4) {
-        grid-column: 3 / span 1;
-        /*grid-column: 3 / 4;*/
-        /*grid-column-start: 2;
-        grid-column-end: 3;*/
-        grid-row: 2 / span 2;
-        /*grid-row: 2 / 4;*/
-        /*grid-row-start: 3;
-        grid-row-end: 5;*/
+        grid-area: calc;
     }
 }
-
