@@ -27,6 +27,10 @@ header p:first-of-type{
     border-radius: 0.5rem;
     border: 1px solid black;
     box-shadow: 0 0.5rem 1rem -0.5rem #333;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
 }
 
 .card img {
@@ -34,15 +38,30 @@ header p:first-of-type{
 }
 
 .wrapper {
-    margin: 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+
+
 @media screen and (min-width: 800px) {
-    .wrapper{
-        margin: 0 150px 0;
+    header {
+            width: 500px;
     }
 
-    header {
-        width: 500px;
+    .wrapper{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .together{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
     }
 }
